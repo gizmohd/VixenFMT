@@ -13,7 +13,9 @@ namespace fmtester
 		static void Main(string[] args)
 		{
 
-		var res= 	fmstick.net.fmstick.RDSGetPsMessageCount();
+			var res= 	fmstick.net.fmstick.RDSSendTimeStamp();
+			//var res2 = fmstick.net.fmstick.RDSSetFifoSize(res); 
+
 		}
 	}
 }

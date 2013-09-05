@@ -320,7 +320,7 @@ namespace fmstick.net
 		private static extern FMTX_MODE_ENUM fmtxRDSSetPsAF(double freq, byte enabled);
 
 		[DllImport("fmstick.dll", CallingConvention = CallingConvention.StdCall)]
-		private static extern FMTX_MODE_ENUM fmtxRDSGetFifoSize();
+		private static extern byte fmtxRDSGetFifoSize();
 		[DllImport("fmstick.dll", CallingConvention = CallingConvention.StdCall)]
 		private static extern FMTX_MODE_ENUM fmtxRDSSetFifoSize(byte u8Val);
 
@@ -416,7 +416,7 @@ namespace fmstick.net
 			return ret;
 		}
 		public static FMTX_MODE_ENUM RDSSetPsMixId(byte u8Val)
-		{
+		{//Works
 			var ret = fmtxRDSSetPsMixId(u8Val);
 			return ret;
 		}
@@ -427,7 +427,7 @@ namespace fmstick.net
 			return ret;
 		}
 		public static FMTX_MODE_ENUM RDSSetPsMiscFlags(ushort u16Val)
-		{
+		{//Works
 			var ret = fmtxRDSSetPsMiscFlags(u16Val);
 			return ret;
 		}
@@ -449,7 +449,7 @@ namespace fmstick.net
 			return ret;
 		}
 		public static FMTX_MODE_ENUM RDSSetPsMessageCount(byte u8Val)
-		{
+		{//Works
 			var ret = fmtxRDSSetPsMessageCount(u8Val);
 			return  ret;
 		}
@@ -465,13 +465,13 @@ namespace fmstick.net
 			return ret;
 		}
 
-		public static FMTX_MODE_ENUM RDSGetFifoSize()
-		{
+		public static  byte RDSGetFifoSize()
+		{//Works
 			var ret = fmtxRDSGetFifoSize();
 			return ret;
 		}
 		public static FMTX_MODE_ENUM RDSSetFifoSize(byte u8Val)
-		{
+		{//Works
 			var ret = fmtxRDSSetFifoSize(u8Val);
 			return ret;
 		}
@@ -510,7 +510,7 @@ namespace fmstick.net
 		}
 
 		public static FMTX_MODE_ENUM RDSSendTimeStamp()
-		{
+		{//Fails
 			var ret = fmtxRDSSendTimeStamp();
 			return ret;
 		}
