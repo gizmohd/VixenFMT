@@ -13,26 +13,7 @@ namespace fmtester
 		static void Main(string[] args)
 		{
 
-			int ret = 0;
-
-			double dval = 0;
-			ret = fmstick.net.fmstick.GetDouble(ref dval);
-			Console.WriteLine( "GetDouble: ret " + ret + ", dval " + dval);
-
-			string sval = "Hello World!";
-			ret = fmstick.net.fmstick.SetMessage( sval);
-			Console.WriteLine("SetMessage: ret " + ret + ", sval " + sval);
-
-			StringBuilder sb = new StringBuilder(1024);
-			sb.Append("sb original");
-			ret = fmstick.net.fmstick.GetMessage( sb);
-			sval = sb.ToString();
-			Console.WriteLine("GetMessage: ret " + ret + ", sval " + sval);
-
-
-			ret = fmstick.net.fmstick.GetDouble(ref dval);
-			Console.WriteLine("GetDouble: ret " + ret + ", dval " + dval);
-			return;
+		var res= 	fmstick.net.fmstick.RDSGetPsMessageCount();
 		}
 	}
 }

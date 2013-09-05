@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 using System.Text;
 using System.Runtime.InteropServices;
-
+/*
+ It seems this DLL MUST be compiled .net 3.5 or lower... otherwise strange things happen
+ * with the DLLImports
+ */
 namespace fmstick.net
 {
 
@@ -307,7 +310,7 @@ namespace fmstick.net
 		private static extern FMTX_MODE_ENUM fmtxRDSSetPsRepeatCount(byte u8Val);
 
 		[DllImport("fmstick.dll", CallingConvention = CallingConvention.StdCall)]
-		private static extern FMTX_MODE_ENUM fmtxRDSGetPsMessageCount();
+		private static extern byte fmtxRDSGetPsMessageCount();
 		[DllImport("fmstick.dll", CallingConvention = CallingConvention.StdCall)]
 		private static extern FMTX_MODE_ENUM fmtxRDSSetPsMessageCount(byte u8Val);
 
@@ -435,13 +438,13 @@ namespace fmstick.net
 			return ret;
 		}
 		public static FMTX_MODE_ENUM RDSSetPsRepeatCount(byte u8Val)
-		{
+		{//Works
 			var ret = fmtxRDSSetPsRepeatCount(u8Val);
 			return ret;
 		}
 
-		public static FMTX_MODE_ENUM RDSGetPsMessageCount()
-		{
+		public static byte RDSGetPsMessageCount()
+		{//Works
 			var ret = fmtxRDSGetPsMessageCount();
 			return ret;
 		}
