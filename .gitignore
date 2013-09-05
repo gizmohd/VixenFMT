@@ -9,3 +9,5 @@ _ReSharper*
 /Output
 /Release
 Vixen 3*
+*.sdf
+*.opensdf
