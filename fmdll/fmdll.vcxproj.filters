@@ -33,15 +33,6 @@
     <ClInclude Include="..\commanddefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inttypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stdint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="propertydefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fmdll.cpp">
